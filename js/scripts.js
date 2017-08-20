@@ -1,5 +1,5 @@
 
- function resCalc(p1,p2,op,res){
+ function resCalc(p1,op,p2,res){
    switch(op) {
      case "X":
          if(p1 * p2 == res){
@@ -24,20 +24,26 @@
 
 var ans_opt_1,ans_opt_2,ans_opt_3,ans_opt_4,ans_opt_5,ans_opt_6;
 var q1,q2;
+var op;
+
+var dailyProgress=0;
+
 ans_opt_1=4;
 ans_opt_2=63;
-ans_opt_3=1;
-ans_opt_4=14;
+ans_opt_3=2;
+ans_opt_4=16;
 ans_opt_5=5;
 ans_opt_6=7;
 
 q1=9;
-q2=7;
+q2=7
+op="-"
 
 
 // Question
 document.getElementById("q1").innerHTML = q1;
 document.getElementById("q2").innerHTML = q2;
+document.getElementById("oper").innerHTML = op;
 
 // Answers Options
 document.getElementById("ans_opt_1").innerHTML = ans_opt_1;
@@ -49,7 +55,9 @@ document.getElementById("ans_opt_6").innerHTML = ans_opt_6;
 
 // On Click
 $("#ans_opt_1").click(function(){
-  if(q1 * q2 == ans_opt_1) {
+  dailyProgress++;
+  $('#prog_bar').width(dailyProgress*10+"%");
+  if(resCalc(q1,op,q2,ans_opt_1)) {
     $('#ans').removeClass('btn-primary').addClass('btn-success');
     document.getElementById("ans").innerHTML = ans_opt_1;
   } else {
@@ -58,7 +66,9 @@ $("#ans_opt_1").click(function(){
   }
 });
 $("#ans_opt_2").click(function(){
-  if(q1 * q2 == ans_opt_2) {
+  dailyProgress++;
+  $('#prog_bar').width(dailyProgress*10+"%");
+  if(resCalc(q1,op,q2,ans_opt_2)) {
     $('#ans').removeClass('btn-primary').addClass('btn-success');
     document.getElementById("ans").innerHTML = ans_opt_2;
   } else {
@@ -67,7 +77,9 @@ $("#ans_opt_2").click(function(){
   }
 });
 $("#ans_opt_3").click(function(){
-  if(q1 * q2 == ans_opt_3) {
+  dailyProgress++;
+  $('#prog_bar').width(dailyProgress*10+"%");
+  if(resCalc(q1,op,q2,ans_opt_3)) {
     $('#ans').removeClass('btn-primary').addClass('btn-success');
     document.getElementById("ans").innerHTML = ans_opt_3;
   } else {
@@ -76,7 +88,10 @@ $("#ans_opt_3").click(function(){
   }
 });
 $("#ans_opt_4").click(function(){
-  if(q1 * q2 == ans_opt_4) {
+  dailyProgress++;
+  $('#prog_bar').width(dailyProgress*10+"%");
+  $('#ans').removeClass('btn-primary').addClass('btn-success');
+  if(resCalc(q1,op,q2,ans_opt_4)) {
     $('#ans').removeClass('btn-primary').addClass('btn-success');
     document.getElementById("ans").innerHTML = ans_opt_4;
   } else {
@@ -85,7 +100,9 @@ $("#ans_opt_4").click(function(){
   }
 });
 $("#ans_opt_5").click(function(){
-  if(q1 * q2 == ans_opt_5) {
+  dailyProgress++;
+  $('#prog_bar').width(dailyProgress*10+"%");
+  if(resCalc(q1,op,q2,ans_opt_5)) {
     $('#ans').removeClass('btn-primary').addClass('btn-success');
     document.getElementById("ans").innerHTML = ans_opt_5;
   } else {
@@ -94,7 +111,9 @@ $("#ans_opt_5").click(function(){
   }
 });
 $("#ans_opt_6").click(function(){
-  if(q1 * q2 == ans_opt_6) {
+  dailyProgress++;
+  $('#prog_bar').width(dailyProgress*10+"%");
+  if(resCalc(q1,op,q2,ans_opt_6)) {
     $('#ans').removeClass('btn-primary').addClass('btn-success');
     document.getElementById("ans").innerHTML = ans_opt_6;
   } else {
