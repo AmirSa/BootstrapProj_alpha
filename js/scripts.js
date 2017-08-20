@@ -22,9 +22,19 @@
      }
  }
 
+ function getRandomArbitrary(min, max) {
+   return Math.random() * (max - min) + min;
+ }
+
+ function getAnsOptRank(lRank) {
+   return getRandomArbitrary(0,lRank*4);
+ }
+
 var ans_opt_1,ans_opt_2,ans_opt_3,ans_opt_4,ans_opt_5,ans_opt_6;
 var q1,q2;
 var op;
+
+var rank = 7;
 
 var dailyProgress=0;
 
